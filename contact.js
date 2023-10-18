@@ -10,6 +10,7 @@ function updateName() {
     }
     else{
         document.getElementById("promo").value=selected_state+"";
+        document.getElementById("myPromo").innerHTML="Name is required";
     }
   }
   
