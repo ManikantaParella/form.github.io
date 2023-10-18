@@ -1,0 +1,107 @@
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./common.css">
+        <link rel="stylesheet" href="./contact.css">
+        <title>contact</title>
+    </head>
+    <body>
+       
+        <h1 id="main-heading">HEALTHONUS</h1>
+    <nav >
+        <div class="home-bar">
+        <ul >
+            <li>
+                <a  href="./index.html"> HOME </a>
+            </li>
+            <li>
+                <a href="#SERVICES"> SERVICES </a>
+            </li>
+            <li>
+                <a  id="career" href="./careers.html"> CAREERS </a>
+            </li>
+            <li> <a class="active" href="./contact.html"> CONTACT </a>
+            </li>
+            <li class="image_class">
+                <img id="img" alt="image" src="./MicrosoftTeams-image.png">
+            </li>
+        </ul></div>
+    
+    </nav>
+        <form name="myForm">
+            <div class="total_table">
+                
+                <table class="table1">
+                    <tr>
+                        <td>My Name:</td>
+                        <td><input type="text" id="fname" onchange="validateName()"><span id="myName">*</span></td>
+                        
+                    </tr>
+                    <tr>
+                        <td>My Email Address:</td>
+                        <td><input type="text" id="email" onchange="validateEmail()"><span id="myEmail">*</span></td>
+                        
+                    </tr>
+                    <tr>
+                        <td>My Telephone Number:</td>
+                        <td><input type="text" class="fdetails"></td>
+                    </tr>
+                    <tr>
+                        <td>My Organization Name:</td>
+                        <td><input type="text" id="organization" onchange="validateOrganization()"><span id="myOrganisation">*</span></td>
+                     </tr>
+                    <tr>
+                        <td>My City:</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>My State or Province:</td>
+                        <td><select id="select_state" onchange="updateName()">
+                            <option value="">Select State or Province</option>
+                            <option value="A.P">A.P</option>
+                            <option value="Telangana">Telangana</option>
+                            <option value="kerala">kerala</option>
+                            <option value="karnataka">karnataka</option>
+                          </select></td>
+                    </tr>
+                    <tr>
+                        <td>Please Contact Me By:</td>
+                        <td>
+                            <input type="radio" name="contact_details">Email<br>
+                            <input type="radio" name="contact_details">Phone<br>
+                            <input type="radio" name="contact_details">Both
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Gender</td>
+                        <td><input type="radio" id="maleClick" value="Male" name="gender" onchange="genderCheck()">Male
+                        <input type="radio" id="femaleClick" value="Female" name="gender" onchange="genderCheck()" >Female</td>
+                    </tr>
+                    <tr>
+                        <td>Promotion Code</td>
+                        <td><input type="text" id="promo"></td>
+                    </tr>
+                    <tr>
+                        <td>Optional information</td>
+                    </tr>
+                </table>
+                    <table class="table2">
+                        <tr><td><i>This information is optional but it help us to serve you better.</i></td></tr></table>
+                <table class="table3"><tr>
+                        <td>My Website Address is: </td>
+                        <td><input type="text"></td>
+                    </tr>
+                
+                    
+                   <tr><td colspan="2">Tell Us More About Your Organization:</td></tr>
+                    <tr><td colspan="2"><textarea ></textarea></td></tr>
+                    <tr><td colspan="2">What I'd really like to know is:</td></tr>
+                    <tr><td colspan="2"><textarea ></textarea></td></tr></table>
+              
+                <input type="button" class="Message" value="Send Message" onclick="validate()">
+                <input type="reset" class="Message" value="Clear Form">
+            
+            </div>
+            </form>
+            <script src="./contact.js"></script>
+    </body>
+</html>
