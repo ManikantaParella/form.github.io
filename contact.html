@@ -30,72 +30,74 @@
         <form name="myForm">
             <div class="total_table">
                 
-                <table class="table1">
-                    <tr>
-                        <td>My Name:</td>
-                        <td><input type="text" id="fname" onchange="validateName()"><span id="myName">*</span></td>
+                <div class="table1">
+                    
+                        <label for="fname">My Name</label>
+                        <input type="text" id="fname" onchange="validateName()"><span id="myName">*</span><br>
                         
-                    </tr>
-                    <tr>
-                        <td>My Email Address:</td>
-                        <td><input type="text" id="email" onchange="validateEmail()"><span id="myEmail">*</span></td>
+                  
+                   
+                         <label for="email">My Email Address:</label>
+                        <input type="text" id="email" onchange="validateEmail()"><span id="myEmail">*</span><br>
                         
-                    </tr>
-                    <tr>
-                        <td>My Telephone Number:</td>
-                        <td><input type="text" class="fdetails"></td>
-                    </tr>
-                    <tr>
-                        <td>My Organization Name:</td>
-                        <td><input type="text" id="organization" onchange="validateOrganization()"><span id="myOrganisation">*</span></td>
-                     </tr>
-                    <tr>
-                        <td>My City:</td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td>My State or Province:</td>
-                        <td><select id="select_state" onchange="updateName()">
+                    
+                    
+                        <label for="telephone">My Telephone Number:</label>
+                        <input type="text" id="telephone" class="fdetails"><br>
+                 
+                    
+                        <label for="organization">My Organization Name:</label>
+                        <input type="text" id="organization" onchange="validateOrganization()"><span id="myOrganisation">*</span><br>
+                     
+                    
+                        <label for="city">My City:</label>
+                        <input type="text" id="city"><br>
+                    
+                    
+                        <label for="select_state">My State or Province:</label>
+                        <select id="select_state" onchange="updateName()">
                             <option value="">Select State or Province</option>
                             <option value="A.P">A.P</option>
                             <option value="Telangana">Telangana</option>
                             <option value="kerala">kerala</option>
                             <option value="karnataka">karnataka</option>
-                          </select></td>
-                    </tr>
-                    <tr>
-                        <td>Please Contact Me By:</td>
-                        <td>
-                            <input type="radio" name="contact_details">Email<br>
-                            <input type="radio" name="contact_details">Phone<br>
-                            <input type="radio" name="contact_details">Both
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Gender</td>
-                        <td><input type="radio" id="maleClick" value="Male" name="gender" onchange="genderCheck()">Male
-                        <input type="radio" id="femaleClick" value="Female" name="gender" onchange="genderCheck()" >Female</td>
-                    </tr>
-                    <tr>
-                        <td>Promotion Code</td>
-                        <td><input type="text" id="promo"></td>
-                    </tr>
-                    <tr>
-                        <td>Optional information</td>
-                    </tr>
-                </table>
-                    <table class="table2">
-                        <tr><td><i>This information is optional but it help us to serve you better.</i></td></tr></table>
-                <table class="table3"><tr>
-                        <td>My Website Address is: </td>
-                        <td><input type="text"></td>
-                    </tr>
+                          </select><br>
+                    
+                    
+                        <label for="a">Please Contact Me By:</label>
+                        
+                            <input type="radio" id="a" name="contact_details"><span class="detail">Email</span>
+                            <input type="radio" id="a" name="contact_details"><span class="detail">Phone</span>
+                            <input type="radio" id="a" name="contact_details"><span class="detail">Both</span><br>
+                        
+                    
+                    
+                        <label for="gender">Gender</label>
+                        <input type="radio" id="maleClick" value="Male" name="gender" onchange="genderCheck()"><span class="genderId">Male</span>
+                        <input type="radio" id="femaleClick" value="Female" name="gender" onchange="genderCheck()" ><span class="genderId">Female</span><br>
+                    
+                    
+                        <label for="promo">Promotion Code</label>
+                        <input type="text" id="promo" onchange="promotionCode()"><span id="myPromo">*</span><br>
+                    
+                    
+                         <p id="information">Optional information</p>
+                    
+                
+                    <div class="table2">
+                        <i>This information is optional but it help us to serve you better.</i></div>
+                <div class="table3">
+                        <label for="Address">My Website Address is:</label>
+                        <input type="text" id="Address">
+                    
                 
                     
-                   <tr><td colspan="2">Tell Us More About Your Organization:</td></tr>
-                    <tr><td colspan="2"><textarea ></textarea></td></tr>
-                    <tr><td colspan="2">What I'd really like to know is:</td></tr>
-                    <tr><td colspan="2"><textarea ></textarea></td></tr></table>
+                   <p class="more_about">Tell Us More About Your Organization:</p>
+                
+                   <textarea id="text1" ></textarea>
+                   <p class="like_to_know">What I'd really like to know is:</p>
+                  
+                   <textarea id="text"></textarea></div>
               
                 <input type="button" class="Message" value="Send Message" onclick="validate()">
                 <input type="reset" class="Message" value="Clear Form">

@@ -1,10 +1,12 @@
 var x;
 var z;
 var y;
+var w;
 function updateName() {
     var selected_state = document.getElementById("select_state").value;
     if(selected_state!=""){
         document.getElementById("promo").value=selected_state+"-PROMO";
+        document.getElementById("myPromo").innerHTML="*";
     }
     else{
         document.getElementById("promo").value=selected_state+"";
@@ -20,7 +22,15 @@ function validateName(){
         document.getElementById("myName").innerHTML="*";
     }
 }
-
+function promotionCode(){
+    var w=document.getElementById("promo").value;
+    if(w==""){
+        document.getElementById("myPromo").innerHTML="Name is required";
+    }
+    else{
+        document.getElementById("myPromo").innerHTML="*";
+    }
+}
 function validateOrganization(){
      z=document.getElementById("organization").value;
     if(z==""){
@@ -81,12 +91,14 @@ function validate(){
     validateName();
     validateEmail();
     validateOrganization();
+    promotionCode();
 }
 function required(){
     x=document.getElementById("fname").value;
     y=document.getElementById("email").value;
     z=document.getElementById("organization").value;
-    if(x==""|| y=="" ||z==""){
+    w=document.getElementById("promo").value;
+    if(x==""|| y=="" ||z=="" || w==""){
         alert("Please fill the required details");
     }
 }
