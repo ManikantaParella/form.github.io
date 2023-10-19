@@ -33,12 +33,12 @@
                 <div class="table1">
                     
                         <label for="fname">My Name</label>
-                        <input type="text" id="fname" onchange="validateName()"><span id="myName">*</span><br>
+                        <input type="text" id="fname" class="name" onchange="validateName()"><span id="name1">*</span><br>
                         
                   
                    
                          <label for="email">My Email Address:</label>
-                        <input type="text" id="email" onchange="validateEmail()"><span id="myEmail">*</span><br>
+                        <input type="text" id="email" onchange="validateName()"><span id="myEmail">*</span><br>
                         
                     
                     
@@ -47,7 +47,7 @@
                  
                     
                         <label for="organization">My Organization Name:</label>
-                        <input type="text" id="organization" onchange="validateOrganization()"><span id="myOrganisation">*</span><br>
+                        <input type="text" id="organization" class="name" onchange="validateName()"><span id="name2">*</span><br>
                      
                     
                         <label for="city">My City:</label>
@@ -63,13 +63,14 @@
                             <option value="karnataka">karnataka</option>
                           </select><br>
                     
-                    
-                        <label for="a">Please Contact Me By:</label>
-                        
-                            <input type="radio" id="a" name="contact_details"><span class="detail">Email</span>
-                            <input type="radio" id="a" name="contact_details"><span class="detail">Phone</span>
-                            <input type="radio" id="a" name="contact_details"><span class="detail">Both</span><br>
-                        
+                        <table>
+                          <tr>
+                            <td>Please Contact Me By:</td>
+                            <td> <input type="radio" id="a" name="contact_details"><span class="detail">Email</span><br>
+                            <input type="radio" id="a" name="contact_details"><span class="detail">Phone</span><br>
+                            <input type="radio" id="a" name="contact_details"><span class="detail">Both</span></td>
+                          </tr>
+                        </table>
                     
                     
                         <label for="gender">Gender</label>
@@ -78,7 +79,7 @@
                     
                     
                         <label for="promo">Promotion Code</label>
-                        <input type="text" id="promo" onchange="promotionCode()"><span id="myPromo">*</span><br>
+                        <input type="text" id="promo" class="name" onchange="validateName()"><span id="name3">*</span><br>
                     
                     
                          <p id="information">Optional information</p>
